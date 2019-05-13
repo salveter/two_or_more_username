@@ -1,0 +1,22 @@
+一、 
+1.若是在linux下查看~目录下面是否有.ssh文件夹，若没有则打开shell输入“ssh-keygen -t rsa -C "exmaple@mail.com"”创建SSH Key;若是在windows下打开git bash输入如上命令创建ssh key。 2.创建好后，登陆github账号，在setting栏中找到ssh keys添加ssh key，标题自拟，key输入.ss文件中id_sra.pub里面的内容,a完成 3.按照同样的步骤完成1,2 4.写配置文件config:
+# salvete                                                        
+Host github.com 
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+# salveter
+Host salveter
+HostName github.com
+User git
+IdentityFile ~/.ssh/salveter/id_rsa
+
+2.ssh-add ~/.ssh/id_rsa
+  ssh-add ~/.ssh/salveter/id_rsa
+
+3.测试
+	ssh T git@github.com
+	ssh T git@salveter
+二、
+1.将git@github.com:saveter/...中的github.com改为salveter
